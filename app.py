@@ -5,7 +5,7 @@ app = Flask(__name__)
 app.secret_key = 'super_secret_dev_key'
 
 # Fetch common passwords list on startup
-URL = "https://raw.github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/xato-net-10-million-passwords-1000.txt"
+URL = "https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/xato-net-10-million-passwords-1000.txt"
 try:
     response = urllib.request.urlopen(URL)
     COMMON_PASSWORDS = set(response.read().decode('utf-8').splitlines())
